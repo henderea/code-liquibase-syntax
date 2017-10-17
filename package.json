@@ -1,0 +1,26 @@
+{
+    "name": "liquibase",
+    "displayName": "Liquibase",
+    "description": "Liquibase syntax highlighting",
+    "version": "0.0.1",
+    "publisher": "henderea",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "liquibase",
+            "aliases": ["Liquibase", "liquibase"],
+            "extensions": [".xml"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "liquibase",
+            "scopeName": "text.liquibase",
+            "path": "./syntaxes/liquibase.tmLanguage.json"
+        }]
+    }
+}

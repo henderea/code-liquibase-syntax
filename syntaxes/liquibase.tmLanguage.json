@@ -1,0 +1,15 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Liquibase",
+	"patterns": [
+		{
+			"include": "text.xml"
+		},
+		{
+			"begin": "(?<=<sql splitStatements=\"false\">)",
+			"end": "(?=</sql>)",
+			"patterns": [{"include": "source.sql"}]
+		}
+	],
+	"scopeName": "text.liquibase"
+}
