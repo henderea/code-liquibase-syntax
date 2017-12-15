@@ -8,6 +8,7 @@
 		{
 			"begin": "(?<=<sql splitStatements=\"false\">)",
 			"end": "(?=</sql>)",
+			"name": "source.sql",
 			"patterns": [{"include": "source.sql"}]
 		}
 	],
