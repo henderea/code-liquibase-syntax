@@ -4,6 +4,7 @@
     "description": "Liquibase syntax highlighting",
     "version": "1.0.0",
     "publisher": "henderea",
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/henderea/code-liquibase-syntax"
@@ -18,20 +19,35 @@
         "Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "liquibase",
-            "aliases": ["Liquibase", "liquibase"],
-            "extensions": [".xml"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "liquibase",
-            "scopeName": "text.liquibase",
-            "path": "./syntaxes/liquibase.tmLanguage.json",
-            "embeddedLanguages": {
-                "text.xml": "xml",
-                "source.sql": "sql"
+        "languages": [
+            {
+                "id": "liquibase",
+                "aliases": [
+                    "Liquibase",
+                    "liquibase"
+                ],
+                "extensions": [
+                    ".xml"
+                ],
+                "configuration": "./language-configuration.json"
             }
-        }]
+        ],
+        "grammars": [
+            {
+                "language": "liquibase",
+                "scopeName": "text.liquibase",
+                "path": "./syntaxes/liquibase.tmLanguage.json",
+                "embeddedLanguages": {
+                    "text.xml": "xml",
+                    "source.sql": "sql"
+                }
+            }
+        ]
+    },
+    "devDependencies": {
+        "vsce": "^1.76.1"
+    },
+    "scripts": {
+        "vsce:package": "vsce package"
     }
 }
