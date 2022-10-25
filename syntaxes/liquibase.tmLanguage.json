@@ -10,25 +10,17 @@
                     "begin": "(<!\\[CDATA\\[)",
                     "end": "(\\]\\]>)",
                     "beginCaptures": {
-                        "0": {"name": "string.unquoted.cdata.xml", "patterns": [{"name": "punctuation.definition.string.begin.xml"}] }
+                        "0": { "name": "string.unquoted.cdata.xml", "patterns": [{ "name": "punctuation.definition.string.begin.xml" }] }
                     },
                     "endCaptures": {
-                        "0": {"name": "string.unquoted.cdata.xml", "patterns": [{"name": "punctuation.definition.string.end.xml"}] }
+                        "0": { "name": "string.unquoted.cdata.xml", "patterns": [{ "name": "punctuation.definition.string.end.xml" }] }
                     },
-                    "patterns": [{
-                        "name": "source.sql",
-                        "include": "source.sql"
-                    }]
+                    "patterns": [{ "name": "source.sql", "include": "source.sql" }]
                 },              
-                {
-                    "name": "source.sql",
-                    "include": "source.sql"
-                }
+                { "name": "source.sql", "include": "source.sql" }
             ]
 		},
-        {
-			"include": "text.xml"
-		}
+        { "include": "text.xml" }
 	],
 	"scopeName": "text.liquibase"
 }
